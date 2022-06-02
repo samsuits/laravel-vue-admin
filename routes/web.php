@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admins\AdminController;
 use App\Http\Controllers\Admins\AdminDashboardController;
 use App\Http\Controllers\Admins\PermissionController;
 use App\Http\Controllers\Admins\RoleController;
@@ -40,6 +41,11 @@ Route::middleware([
 
 Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('dashboard', [AdminDashboardController::class, 'index'])->name('dashboard.index');
+
+    Route::prefix('admins')->name('admins.')->group(function () {
+        Route::get('/', [AdminController::class, 'index'])->name('index');
+        Route::patch('/{admin}', [AdminController::class, 'update'])->name('update');
+    });
 
     Route::prefix('users')->name('users.')->group(function () {
         Route::get('/', [UserController::class, 'index'])->name('index');

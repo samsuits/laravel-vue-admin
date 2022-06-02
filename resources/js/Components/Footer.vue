@@ -2,7 +2,7 @@
     <footer class="main-footer">
         <strong
             >Copyright &copy; 2014-{{ currentDate.getFullYear() }}
-            <inertia-link href="#">Admin-O-Matic</inertia-link>.</strong
+            <inertia-link href="#">Laravel-Vue-Admin</inertia-link>.</strong
         >
         All rights reserved.
         <div class="float-right d-none d-sm-inline-block">

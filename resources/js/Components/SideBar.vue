@@ -8,7 +8,7 @@
                 class="brand-image img-circle elevation-3"
                 style="opacity: 0.8"
             />
-            <span class="brand-text font-weight-light">Admin-O-Matic</span>
+            <span class="brand-text font-weight-light">Laravel-Vue-Admin</span>
         </inertia-link>
 
         <!-- Sidebar -->
@@ -57,7 +57,10 @@
 
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <inertia-link class="nav-link">
+                                <inertia-link
+                                    :href="route('admin.admins.index')"
+                                    class="nav-link"
+                                >
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Admins</p>
                                 </inertia-link>
